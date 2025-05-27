@@ -1,0 +1,22 @@
+{
+  "name": "file-share-app",
+  "version": "1.0.0",
+  "description": "A simple web app for uploading files and sharing links with friends.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "mongoose": "^7.8.7",
+    "multer": "^1.4.5-lts.1"
+  },
+  "keywords": [],
+  "type": "commonjs"
+}

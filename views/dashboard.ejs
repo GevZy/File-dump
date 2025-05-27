@@ -1,0 +1,32 @@
+<h2>Welcome <%= user %></h2>
+
+<h3>Upload File</h3>
+<form method="POST" action="/upload" enctype="multipart/form-data">
+  <input type="file" name="file" required />
+  <button type="submit">Upload</button>
+</form>
+
+<h3>Add Link</h3>
+<form method="POST" action="/add-link">
+  <input name="title" placeholder="Title" required />
+  <input name="url" placeholder="https://example.com" required />
+  <button type="submit">Add Link</button>
+</form>
+
+<h3>Files</h3>
+<ul>
+  <% files.forEach(file => { %>
+    <li>
+      <a href="/download/<%= file._id %>"><%= file.originalName %></a> uploaded by <%= file.uploader %>
+    </li>
+  <% }); %>
+</ul>
+
+<h3>Links</h3>
+<ul>
+  <% links.forEach(link => { %>
+    <li><a href="<%= link.url %>" target="_blank"><%= link.title %></a> added by <%= link.addedBy %></li>
+  <% }); %>
+</ul>
+
+<a href="/logout">Logout</a>
